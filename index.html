@@ -63,7 +63,9 @@
           <div
             class="bg-[#00A63E] w-20 h-10 rounded-3xl flex items-center justify-center gap-1 text-white"
           >
-            <p class="font-bold text-xs sm:text-sm"><span>2</span> Copy</p>
+            <p class="font-bold text-xs sm:text-sm">
+              <span id="copy-count">2</span> Copy
+            </p>
           </div>
         </div>
       </nav>
@@ -94,48 +96,46 @@
         class="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 py-10"
       >
         <!-- call history section -->
-<section
-  class="bg-[#ffffff] rounded-2xl p-4 lg:col-span-1 col-span-1 order-1 lg:order-2"
->
-  <div class="flex justify-between items-center mb-2">
-    <div class="flex items-center gap-2">
-      <i class="fa-regular fa-clock text-[#5C5C5C]"></i>
-      <span class="font-semibold">Call History</span>
-    </div>
-    <button
-      id="clear-history"
-      class="btn w-20 h-10"
-      style="
-        background-color: #00a63e;
-        color: #fff;
-        border-radius: 20px;
-        
-      "
-    >
-      Clear
-    </button>
-  </div>
+        <section
+          class="bg-[#ffffff] rounded-2xl p-4 lg:col-span-1 col-span-1 order-1 lg:order-2"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center gap-2">
+              <i class="fa-regular fa-clock text-[#5C5C5C]"></i>
+              <span class="font-semibold">Call History</span>
+            </div>
+            <button
+              id="clear-history"
+              class="btn w-20 h-10"
+              style="
+                background-color: #00a63e;
+                color: #fff;
+                border-radius: 20px;
+              "
+            >
+              Clear
+            </button>
+          </div>
 
-  <!-- History items will be added here -->
-  <div id="call-history-list" class=""></div>
-</section>
-
+          <!-- History items will be added here -->
+          <div id="call-history-list"></div>
+        </section>
 
         <!-- service section -->
         <section
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:col-span-3 gap-4 order-2 lg:order-1"
         >
           <!-- card 1-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/emergency.png"
                 alt=""
                 class="w-10 h-10 p-2 bg-[#ffe3e2] rounded-lg"
               />
-              <i
-                class="fa-regular fa-heart text-[#5C5C5C] heart-icon-btn"
-              ></i>
+              <i class="fa-regular fa-heart text-[#5C5C5C] heart-icon-btn"></i>
             </div>
             <div class="mb-4">
               <h1 class="service-name text-lg font-bold text-[#111111]">
@@ -155,7 +155,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -174,17 +174,16 @@
           </div>
 
           <!--card 2-->
-          <div class= "service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/police.png"
                 alt=""
                 class="w-10 h-10 p-2 bg-[#DFEFFF] rounded-lg"
               />
-              <i
-                
-                class="fa-regular fa-heart text-[#5C5C5C] heart-icon-btn"
-              ></i>
+              <i class="fa-regular fa-heart text-[#5C5C5C] heart-icon-btn"></i>
             </div>
             <div class="mb-4">
               <h1 class="service-name text-lg font-bold text-[#111111]">
@@ -204,7 +203,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -222,7 +221,9 @@
             </div>
           </div>
           <!--card 3-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/fire-service.png"
@@ -249,7 +250,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -267,7 +268,9 @@
             </div>
           </div>
           <!--card 4-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/ambulance.png"
@@ -294,7 +297,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -312,7 +315,9 @@
             </div>
           </div>
           <!--card 5-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/emergency.png"
@@ -339,7 +344,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -357,7 +362,9 @@
             </div>
           </div>
           <!--card 6-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/emergency.png"
@@ -384,7 +391,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -402,7 +409,9 @@
             </div>
           </div>
           <!--card 7-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/emergency.png"
@@ -429,7 +438,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -447,7 +456,9 @@
             </div>
           </div>
           <!--card-8-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/emergency.png"
@@ -457,7 +468,9 @@
               <i class="fa-regular fa-heart text-[#5C5C5C] heart-icon-btn"></i>
             </div>
             <div class="mb-4">
-              <h1 class="service-name text-lg font-bold text-[#111111]">Brac Helpline</h1>
+              <h1 class="service-name text-lg font-bold text-[#111111]">
+                Brac Helpline
+              </h1>
               <p class="text-sm text-[#5C5C5C]">Brac</p>
             </div>
             <div class="mb-4">
@@ -472,7 +485,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
@@ -490,7 +503,9 @@
             </div>
           </div>
           <!--card 9-->
-          <div class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto">
+          <div
+            class="service-container bg-white p-4 w-full sm:w-80 rounded-xl mx-auto"
+          >
             <div class="flex items-center justify-between mb-2">
               <img
                 src="./assets/emergency.png"
@@ -518,7 +533,7 @@
             </div>
             <div class="flex gap-2">
               <button
-                class="btn flex-1"
+                class="btn flex-1 copy-btn"
                 style="color: #5c5c5c; border-radius: 10px"
               >
                 <i class="fa-regular fa-copy"></i>Copy
