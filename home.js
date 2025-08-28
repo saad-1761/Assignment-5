@@ -35,7 +35,6 @@ document.querySelectorAll(".call-btn").forEach(function (btn) {
     // Get local time
     const currentTime = new Date().toLocaleTimeString();
 
-    const historyList = document.getElementById("call-history-list");
     // Create new history item
     const historyItem = document.createElement("div");
     historyItem.className =
@@ -49,7 +48,7 @@ document.querySelectorAll(".call-btn").forEach(function (btn) {
     `;
 
     // Append to history
-    historyList.append(historyItem);
+    historyList.prepend(historyItem);
 
     // Show alert
     alert(`Calling ${serviceName} at ${number}`);
@@ -57,6 +56,7 @@ document.querySelectorAll(".call-btn").forEach(function (btn) {
 });
 
 // Clear button
+const historyList = document.getElementById("call-history-list");
 document.getElementById("clear-history").addEventListener("click", function () {
   historyList.innerHTML = ""; // remove all history items
 });
