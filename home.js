@@ -48,7 +48,7 @@ document.querySelectorAll(".call-btn").forEach(function (btn) {
     `;
 
     // Append to history
-    historyList.prepend(historyItem);
+    historyList.append(historyItem);
 
     // Show alert
     alert(`Calling ${serviceName} at ${number}`);
