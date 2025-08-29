@@ -9,6 +9,12 @@ document.querySelectorAll(".heart-icon-btn").forEach(function (btn) {
   });
 });
 
+// Clear button
+const historyList = document.getElementById("call-history-list");
+document.getElementById("clear-history").addEventListener("click", function () {
+  historyList.innerHTML = ""; // remove all history items
+});
+
 //call button click event to alert the number
 // Select all call buttons
 document.querySelectorAll(".call-btn").forEach(function (btn) {
@@ -55,19 +61,14 @@ document.querySelectorAll(".call-btn").forEach(function (btn) {
   });
 });
 
-// Clear button
-const historyList = document.getElementById("call-history-list");
-document.getElementById("clear-history").addEventListener("click", function () {
-  historyList.innerHTML = ""; // remove all history items
-});
-
+ 
 //copy button
 
 // For each card copy button
 document.querySelectorAll(".copy-btn").forEach(function (btn) {
   btn.addEventListener("click", function () {
-    const copyCountEl = document.getElementById("copy-count");
-    let copyCount = parseInt(copyCountEl.innerText) || 0;
+    const copyCountElement = document.getElementById("copy-count");
+    let copyCount = parseInt(copyCountElement.innerText);
     // Find the parent card
     const card = this.closest(".service-container");
     const number = card.querySelector(".service-number").innerText;
@@ -76,7 +77,7 @@ document.querySelectorAll(".copy-btn").forEach(function (btn) {
     navigator.clipboard.writeText(number).then(function () {
       // Increase count
       copyCount += 1;
-      copyCountEl.innerText = copyCount;
+      copyCountElement.innerText = copyCount;
       // Show alert
       alert(`Hotline Number ${number} copied to clipboard!`);
     });
